@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 //class for stack
 class Stack
@@ -12,14 +11,16 @@ private:
    string postfix="";
 
 public:
-   Stack(int size);
-   ~Stack();
-   bool isEmpty();
-   bool isFull();
-   bool push(int data);
-   int pop();
-   Stack infixToPostfix(Stack ob,string infix);
-   string getPostfixExp(){
+   Stack(int size);//initializing Stack class
+   ~Stack();//destructor for Stack class
+   bool isEmpty();//check stk is empty or not
+   bool isFull();//check stk is full or not
+   bool push(char data);//push data(operator and parenthesis) to stk
+   char pop();//pop data(operator and parenthesis) from stk
+   int precedence(char op);//check the precedence of operators and assign integer value accordingly
+   void infixToPostfix(string infix);//function for converting infix argument and storing it in postfix string var
+   string getPostfixExp()//return postfix when called
+   {
     return postfix;
    }
 };
@@ -51,7 +52,7 @@ bool Stack::isFull()
    }
    return false;
 }
-bool Stack::push(int data)
+bool Stack::push(char data)
 {
    if (isFull())
    {
@@ -62,84 +63,79 @@ bool Stack::push(int data)
    stk[top] = data;
    return true;
 }
-int Stack::pop()
+char Stack::pop()
 {
    if (isEmpty())
    {
       cout << "ERROR!!!" << endl;
       return false;
    }
-   int data;
+   char data;
    data = stk[top];
    top--;
    return data;
 }
-// Function to return precedence of operators
-int precedence(char op)
+int Stack:: precedence(char op)
 {
     if (op == '+' || op == '-')
         return 1;
     if (op == '*' || op == '/')
         return 2;
-    if (op == '^')
+    if (op == '^'||op == '$')
         return 3;
     return 0;
 }
-
-// Function to convert infix to postfix
-Stack Stack::infixToPostfix(Stack ob,string infix)
+ void Stack::infixToPostfix(string infix)
 {
-    Stack obj=ob;
-
-    for (char c : infix)
+    int length=infix.length();
+    for (int i=0;i<length;i++)
     {
+        char c=infix[i];
         // If the character is an operand, add it to the postfix expression
         if (isalnum(c))
         {
             postfix += c;
         }
         // If the character is an operator
-        else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^')
+        else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^'||c == '$')
         {
             // Pop operators with higher or equal precedence and add them to postfix expression
-            while (!obj.isEmpty() && precedence(obj.stk[top]) >= precedence(c))
+            while (!isEmpty() && precedence(stk[top]) >= precedence(c))
             {
-                postfix += obj.stk[top];
-                obj.pop();
+                postfix += stk[top];
+                pop();
             }
             // Push the current operator onto the stack
-            obj.push(c);
+            push(c);
         }
         // If the character is a left parenthesis, push it onto the stack
         else if (c == '(')
         {
-            obj.push(c);
+            push(c);
         }
         // If the character is a right parenthesis
         else if (c == ')')
         {
             // Pop operators and add them to postfix expression until a left parenthesis is found
-            while (!obj.isEmpty() && obj.stk[top]!= '(')
+            while (!isEmpty() && stk[top]!= '(')
             {
-                postfix += obj.stk[top];
-                obj.pop();
+                postfix += stk[top];
+                pop();
             }
             // Pop the left parenthesis from the stack
-            if (!obj.isEmpty() && obj.stk[top] == '(')
+            if (!isEmpty() && stk[top] == '(')
             {
-                obj.pop();
+                pop();
             }
         }
     }
 
     // Pop remaining operators and add them to postfix expression
-    while (!obj.isEmpty())
+    while (!isEmpty())
     {
-        postfix += obj.stk[top];
-        obj.pop();
+        postfix += stk[top];
+        pop();
     }
-
-    return obj;
 }
 
 int main()
@@ -147,8 +143,9 @@ int main()
     string infix;
     cout<<"Write the valid infix expression to convert:"<<endl;
     cin>>infix;
-    Stack obj(50);
-    obj.infixToPostfix(obj,infix);
+    int size=infix.length();
+    Stack obj(size);
+    obj.infixToPostfix(infix);
     string postfix=obj.getPostfixExp();
     cout << "Infix expression: " << infix << endl;
     cout << "Postfix expression: " << postfix << endl;
