@@ -11,15 +11,15 @@ private:
    string postfix="";
 
 public:
-   Stack(int size);//initializing Stack class
-   ~Stack();//destructor for Stack class
-   bool isEmpty();//check stk is empty or not
-   bool isFull();//check stk is full or not
-   bool push(char data);//push data(operator and parenthesis) to stk
-   char pop();//pop data(operator and parenthesis) from stk
-   int precedence(char op);//check the precedence of operators and assign integer value accordingly
-   void infixToPostfix(string infix);//function for converting infix argument and storing it in postfix string var
-   string getPostfixExp()//return postfix when called
+   Stack(int size);//initializing Stack class.
+   ~Stack();//destructor for Stack class.
+   bool isEmpty();//check stk is empty or not.
+   bool isFull();//check stk is full or not.
+   bool push(char data);//push data(operator and parenthesis) to stk.
+   char pop();//pop data(operator and parenthesis) from stk.
+   int precedence(char op);//check the precedence of operators and assign integer value accordingly.
+   void infixToPostfix(string infix);//function for converting infix argument and storing it in postfix string var.
+   string getPostfixExp()//return postfix when called.
    {
     return postfix;
    }
