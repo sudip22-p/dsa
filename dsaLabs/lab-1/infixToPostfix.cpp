@@ -47,7 +47,7 @@ bool Stack::isFull()
 {
    if (top >= size - 1)
    {
-      cout << "ERROR!!!" << endl;
+      cout << "STACK OVERFLOW!!!" << endl;
       return true;
    }
    return false;
@@ -56,7 +56,7 @@ bool Stack::push(char data)
 {
    if (isFull())
    {
-      cout << "ERROR!!!" << endl;
+      cout << "STACK OVERFLOW!!!" << endl;
       return false;
    }
    top++;
@@ -67,7 +67,7 @@ char Stack::pop()
 {
    if (isEmpty())
    {
-      cout << "ERROR!!!" << endl;//
+      cout << "STACK UNDERFLOW!!!" << endl;
       return false;
    }
    char data;
