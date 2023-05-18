@@ -5,7 +5,7 @@ using namespace std;
 class Stack
 {
 private:
-   int *stk;
+   char *stk;
    int top;
    int size;
    string postfix="";
@@ -28,7 +28,7 @@ public:
 Stack::Stack(int size)
 {
    this->size = size;
-   stk = new int(size);
+   stk = new char(size);
    top = -1;
 }
 
