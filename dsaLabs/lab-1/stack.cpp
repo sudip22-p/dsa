@@ -29,10 +29,17 @@ Stack::~Stack()
 }
 void Stack::display()
 {
-   cout << "Data in Stack are::" << endl;
-   for (int i = 0; i <= top; i++)
+   if (isEmpty())
    {
-      cout << "data no:" << i + 1 << "\tdata = " << stk[i] << endl;
+      cout << "no data to display:" << endl;
+   }
+   else
+   {
+      cout << "Data in Stack are::" << endl;
+      for (int i = 0; i <= top; i++)
+      {
+         cout << " * " << stk[i] << endl;
+      }
    }
 }
 bool Stack::isEmpty()
