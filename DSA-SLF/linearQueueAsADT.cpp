@@ -89,7 +89,7 @@ void LinearQueue::display()
     cout << "Data in queue ARE:" << endl;
     for (int i = front; i <= rear; i++)
     {
-        cout << "data no: " << i << " = " << queue[i] << endl;
+        cout << " * " << queue[i] << endl;
     }
 }
 int main()
