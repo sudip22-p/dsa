@@ -77,7 +77,8 @@ int LinearQueue::dequeue()
         front = -1;
         rear = -1;
     }
-    else{
+    else
+    {
         front++;
     }
     cout << "dequeue success....." << endl
@@ -86,10 +87,17 @@ int LinearQueue::dequeue()
 }
 void LinearQueue::display()
 {
-    cout << "Data in queue ARE:" << endl;
-    for (int i = front; i <= rear; i++)
+    if (isEmpty())
     {
-        cout << " * " << queue[i] << endl;
+        cout << "NO DATA TO DISPLAY!!" << endl;
+    }
+    else
+    {
+        cout << "Data in queue ARE:" << endl;
+        for (int i = front; i <= rear; i++)
+        {
+            cout << " * " << queue[i] << endl;
+        }
     }
 }
 int main()
