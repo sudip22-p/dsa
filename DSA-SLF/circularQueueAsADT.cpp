@@ -37,7 +37,7 @@ bool LinearQueue::isEmpty()
 }
 bool LinearQueue::isFull()
 {
-    if ((front == 0 && rear == size - 1)||(rear==front-1))
+    if ((front == 0 && rear == size - 1) || (rear == front - 1))
     {
         cout << "Q OVERFLOW!!!" << endl;
         return true;
@@ -59,7 +59,7 @@ bool LinearQueue::enqueue(int data)
         cout << "enque success....." << endl;
         return true;
     }
-    rear=(rear+1)%size;
+    rear = (rear + 1) % size;
     queue[rear] = data;
     cout << "enque success....." << endl;
     return true;
@@ -77,8 +77,9 @@ int LinearQueue::dequeue()
         front = -1;
         rear = -1;
     }
-    else{
-        front=(front+1)%size;
+    else
+    {
+        front = (front + 1) % size;
     }
     cout << "dequeue success....." << endl
          << "data removed:" << data << endl;
@@ -86,10 +87,35 @@ int LinearQueue::dequeue()
 }
 void LinearQueue::display()
 {
-    cout << "Data in queue ARE:" << endl;
-    for (int i = front; i <= rear; i++)
+    if (isEmpty())
     {
-        cout << "data no: " << i << " = " << queue[i] << endl;
+        cout << "NO DATA TO DISPLAY!!" << endl;
+    }
+    else
+    {
+        cout << "Data in queue ARE:" << endl;
+        if (front < rear)
+        {
+            for (int i = front; i <= rear; i++)
+            {
+                cout << " * " << queue[i] << endl;
+            }
+        }
+        else if (rear < front)
+        {
+            for (int i = front; i <= size - 1; i++)
+            {
+                cout << " * " << queue[i] << endl;
+            }
+            for (int i = 0; i <= rear; i++)
+            {
+                cout << " * " << queue[i] << endl;
+            }
+        }
+        else
+        {
+            cout << " * " << queue[front] << endl; // i.e for front=rear ..
+        }
     }
 }
 int main()
