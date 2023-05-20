@@ -79,10 +79,12 @@ bool LinkedList::insertBeforeNode(int data,int nodeData){
         target=target->next;
     }
     if(target==NULL){
+    	cout<<"No such node ERROR!!!"<<endl;
         return false;
     }
     newNode->next=target->next;
     target->next=newNode;
+    cout<<"Insertion SUCCESSFULL!!"<<endl;
     return true;
 }
 bool LinkedList::insertAfterNode(int data,int nodeData){
@@ -96,15 +98,18 @@ bool LinkedList::insertAfterNode(int data,int nodeData){
         target=target->next;
     }
     if(target==NULL){
+    	cout<<"No such node ERROR!!!"<<endl;
         return false;
     }
     if(target==start){
         newNode->next=start;
         start=newNode;
+        cout<<"Insertion SUCCESSFULL!!"<<endl;
         return true;
     }
     newNode->next=target;
     preTarget->next=newNode;
+    cout<<"Insertion SUCCESSFULL!!"<<endl;
     return true;
 }
 bool LinkedList::deleteAtBeginning(){
@@ -114,6 +119,7 @@ bool LinkedList::deleteAtBeginning(){
     }
     Node*target=start;
     start=start->next;
+    cout<<"Deletion SUCCESSFULL!!"<<endl;
     cout << "data deleted=" << target->data << endl;
     delete target;
     return true;
@@ -130,6 +136,7 @@ bool LinkedList::deleteAtEnd(){
         target=target->next;
     }
     preTarget->next=NULL;
+    cout<<"Deletion SUCCESSFULL!!"<<endl;
     cout << "data deleted=" << target->data << endl;
     delete target;
     return true;
@@ -143,10 +150,11 @@ bool LinkedList::deleteNode(int nodeData){
         target=target->next;
     }
     if(target==NULL){
-        cout<<"ERROR!!"<<endl;
+        cout<<"No such node ERROR!!"<<endl;
         return false;
     }
     preTarget->next=target->next;
+    cout<<"Deletion SUCCESSFULL!!"<<endl;
     cout << "data deleted=" << target->data << endl;
     delete target;
     return true;
@@ -158,8 +166,9 @@ void LinkedList::display(){
     }
     else{
         cout<<"DATA IN LINKED LIST ARE:-"<<endl;
-        while(temp&&temp->next!=NULL){
+        while(temp!=NULL){
             cout<<" * "<<temp->data<<endl;
+            temp=temp->next;
         }
     } 
 }
