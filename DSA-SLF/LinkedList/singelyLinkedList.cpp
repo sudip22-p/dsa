@@ -153,6 +153,14 @@ bool LinkedList::deleteNode(int nodeData){
         cout<<"No such node ERROR!!"<<endl;
         return false;
     }
+    if(target==start){
+    	deleteAtBeginning();
+    	return true;
+	}
+	if(target->next==NULL){
+    	deleteAtEnd();
+    	return true;
+	}
     preTarget->next=target->next;
     cout<<"Deletion SUCCESSFULL!!"<<endl;
     cout << "data deleted=" << target->data << endl;
