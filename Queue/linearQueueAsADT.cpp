@@ -18,7 +18,7 @@ public:
     }
     bool isEmpty(); // check q is empty or not.
     bool isFull();  // check q is full or not.
-    bool enqueue(int data);
+    bool enqueue();
     int dequeue();
     void display();
     ~LinearQueue()
@@ -28,7 +28,7 @@ public:
 };
 bool LinearQueue::isEmpty()
 {
-    if ((front == -1 && rear == -1))
+    if ((front == -1 && rear == -1) || (front > rear))
     {
         cout << "Q UNDERFLOW!!!" << endl;
         return true;
@@ -37,31 +37,35 @@ bool LinearQueue::isEmpty()
 }
 bool LinearQueue::isFull()
 {
-    if ((front == 0 && rear == size - 1) || (rear == front - 1))
+    if (rear == size - 1)
     {
         cout << "Q OVERFLOW!!!" << endl;
         return true;
     }
     return false;
 }
-bool LinearQueue::enqueue(int data)
+bool LinearQueue::enqueue()
 {
     if (isFull())
     {
-        cout << "enque failure....." << endl;
+        cout << "enqueue failure....." << endl;
         return false;
     }
+
+    int data;
+    cout << "Enter data to add in queue:" << endl;
+    cin >> data;
     if (front == -1 && rear == -1)
     {
         front = 0;
         rear = 0;
         queue[rear] = data;
-        cout << "enque success....." << endl;
+        cout << "enqueue success....." << endl;
         return true;
     }
-    rear = (rear + 1) % size;
+    rear++;
     queue[rear] = data;
-    cout << "enque success....." << endl;
+    cout << "enqueue success....." << endl;
     return true;
 }
 int LinearQueue::dequeue()
@@ -79,7 +83,7 @@ int LinearQueue::dequeue()
     }
     else
     {
-        front = (front + 1) % size;
+        front++;
     }
     cout << "dequeue success....." << endl
          << "data removed:" << data << endl;
@@ -94,27 +98,9 @@ void LinearQueue::display()
     else
     {
         cout << "Data in queue ARE:" << endl;
-        if (front < rear)
+        for (int i = front; i <= rear; i++)
         {
-            for (int i = front; i <= rear; i++)
-            {
-                cout << " * " << queue[i] << endl;
-            }
-        }
-        else if (rear < front)
-        {
-            for (int i = front; i <= size - 1; i++)
-            {
-                cout << " * " << queue[i] << endl;
-            }
-            for (int i = 0; i <= rear; i++)
-            {
-                cout << " * " << queue[i] << endl;
-            }
-        }
-        else
-        {
-            cout << " * " << queue[front] << endl; // i.e for front=rear ..
+            cout << " * " << queue[i] << endl;
         }
     }
 }
@@ -136,10 +122,7 @@ int main()
         switch (choice)
         {
         case 1:
-            int data;
-            cout << "Enter data to add in queue:" << endl;
-            cin >> data;
-            q.enqueue(data);
+            q.enqueue();
             break;
         case 2:
             q.dequeue();

@@ -12,7 +12,7 @@ public:
    ~Stack();
    bool isEmpty();
    bool isFull();
-   bool push(int data);
+   bool push();
    int pop();
    void display();
 };
@@ -60,13 +60,16 @@ bool Stack::isFull()
    }
    return false;
 }
-bool Stack::push(int data)
+bool Stack::push()
 {
    if (isFull())
    {
       cout << "No Space in Stack to add data" << endl;
       return false;
    }
+   int data;
+   cout << "Enter data to add in stack:" << endl;
+   cin >> data;
    top++;
    stk[top] = data;
    cout << "data added successfully....." << endl;
@@ -106,10 +109,7 @@ int main()
          cout << "data deleted=" << stk.pop() << endl;
          break;
       case 2:
-         int data;
-         cout << "Enter data to add in stack:" << endl;
-         cin >> data;
-         stk.push(data);
+         stk.push();
          break;
       case 3:
          stk.display();
