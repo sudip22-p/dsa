@@ -98,28 +98,34 @@ void LinearQueue::display()
     else
     {
         cout << "Data in queue ARE:" << endl;
-        if (front < rear)
-        {
-            for (int i = front; i <= rear; i++)
-            {
-                cout << " * " << queue[i] << endl;
-            }
-        }
-        else if (rear < front)
-        {
-            for (int i = front; i <= size - 1; i++)
-            {
-                cout << " * " << queue[i] << endl;
-            }
-            for (int i = 0; i <= rear; i++)
-            {
-                cout << " * " << queue[i] << endl;
-            }
-        }
-        else
-        {
-            cout << " * " << queue[front] << endl; // i.e for front=rear ..
-        }
+//        if (front < rear)
+//        {
+//            for (int i = front; i <= rear; i++)
+//            {
+//                cout << " * " << queue[i] << endl;
+//            }
+//        }
+//        else if (rear < front)
+//        {
+//            for (int i = front; i <= size - 1; i++)
+//            {
+//                cout << " * " << queue[i] << endl;
+//            }
+//            for (int i = 0; i <= rear; i++)
+//            {
+//                cout << " * " << queue[i] << endl;
+//            }
+//        }
+//        else
+//        {
+//            cout << " * " << queue[front] << endl; // i.e for front=rear ..
+//        }
+//shorthand loop
+for (int i = front; i!=rear; i=(i+1)%size)
+           {
+              cout << " * " << queue[i] << endl;
+          }
+          cout << " * " << queue[rear] << endl;
     }
 }
 int main()
