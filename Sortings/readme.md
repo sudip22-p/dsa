@@ -1,6 +1,9 @@
- # Implementations of different sorting algorithms::
- <br><br><br>
+# Implementations of different sorting algorithms::
+
+<br><br><br>
+
  <h1> * Insertion Sort:)</h1>
+ <h2>main idea:</h2><h3>Assumes one element as perfectly sort and arranges rest around it.</h3>
   <b>STEPS:</b>
   <i>
     <ol>
@@ -15,7 +18,7 @@
   </i>
  <br><br><br>
 <h1> * Selection Sort:)</h1>
- <h3>main idea:Find the minm element from unsorted list and swap it at the beginning of list</h3>
+ <h2>main idea:</h2><h3>Find the minm element from unsorted list and swap it at the beginning of list</h3>
  <b>STEPS:</b>
   <i>
     <ol>
@@ -27,7 +30,7 @@
   </i>
  <br><br><br>
  <h1> * Bubble Sort:)</h1>
- <h3>main idea:Repeatedly sort two adjacent element if they are in wrong order.</h3>
+ <h2>main idea:</h2><h3>Repeatedly sort two adjacent element if they are in wrong order.</h3>
  <b>STEPS:</b>
   <i>
     <ol>
@@ -41,7 +44,7 @@
   </i>
  <br><br><br>
  <h1> * Radix/Bucket Sort:)</h1>
- <h3>main idea:Comparison of ones tens hundredth ..........positioned value of elements/data and arrange it accordingly.</h3>
+ <h2>main idea:</h2><h3>Comparison of ones tens hundredth ..........positioned value of elements/data and arrange it accordingly.</h3>
  <b>STEPS:</b>
   <i>
     <ol>
@@ -50,7 +53,7 @@
   </i>
  <br><br><br>
  <h1> * Merge Sort:)</h1>
- <h3>main idea:Divide and conquer i.e. divide the list in sublists and sort them accodingly.</h3>
+ <h2>main idea:</h2><h3>Divide and conquer i.e. divide the list in sublists and sort them accodingly.</h3>
  <b>STEPS:</b>
   <i>
     <ol>
@@ -69,7 +72,7 @@
   </i>
  <br><br><br>
   <h1>* Quick Sort:)</h1>
- <h3>main idea:Assuming pivot element and partitioning it as smallest goes at left side and largest goes at right side.</h3>
+ <h2>main idea:</h2><h3>Assuming pivot element and partitioning it as smallest goes at left side and largest goes at right side.</h3>
  <b>STEPS:</b>
   <i>
     <ol>
@@ -81,7 +84,7 @@
   </i>
  <br><br><br>
  <h1> * Exchange Sort:)</h1>
- <h3>main idea:Making the elements sorted one by one from starting to end.</h3>
+ <h2>main idea:</h2><h3>Making the elements sorted one by one from starting to end.</h3>
  <b>STEPS:</b>
   <i>
     <ol>
