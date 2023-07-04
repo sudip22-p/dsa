@@ -1,6 +1,6 @@
  # Implementations of different sorting algorithms::
  <br><br><br>
- ## * Insertion Sort:)
+ <h1> * Insertion Sort:)</h1>
   <b>STEPS:</b>
   <i>
     <ol>
@@ -14,7 +14,7 @@
     </ol>
   </i>
  <br><br><br>
-## * Selection Sort:)
+<h1> * Selection Sort:)</h1>
  <h3>main idea:Find the minm element from unsorted list and swap it at the beginning of list</h3>
  <b>STEPS:</b>
   <i>
@@ -26,7 +26,7 @@
     </ol>
   </i>
  <br><br><br>
- ## * Bubble Sort:)
+ <h1> * Bubble Sort:)</h1>
  <h3>main idea:Repeatedly sort two adjacent element if they are in wrong order.</h3>
  <b>STEPS:</b>
   <i>
@@ -40,7 +40,7 @@
     </ol>
   </i>
  <br><br><br>
- ## * Radix/Bucket Sort:)
+ <h1> * Radix/Bucket Sort:)</h1>
  <h3>main idea:Comparison of ones tens hundredth ..........positioned value of elements/data and arrange it accordingly.</h3>
  <b>STEPS:</b>
   <i>
@@ -49,7 +49,7 @@
     </ol>
   </i>
  <br><br><br>
- ## * Merge Sort:)
+ <h1> * Merge Sort:)</h1>
  <h3>main idea:Divide and conquer i.e. divide the list in sublists and sort them accodingly.</h3>
  <b>STEPS:</b>
   <i>
@@ -68,7 +68,7 @@
     </ol>
   </i>
  <br><br><br>
- ## * Quick Sort:)
+  <h1>* Quick Sort:)</h1>
  <h3>main idea:Assuming pivot element and partitioning it as smallest goes at left side and largest goes at right side.</h3>
  <b>STEPS:</b>
   <i>
@@ -80,7 +80,7 @@
     </ol>
   </i>
  <br><br><br>
- ## * Exchange Sort:)
+ <h1> * Exchange Sort:)</h1>
  <h3>main idea:Making the elements sorted one by one from starting to end.</h3>
  <b>STEPS:</b>
   <i>
