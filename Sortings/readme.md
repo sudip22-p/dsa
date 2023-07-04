@@ -26,7 +26,7 @@
     </ol>
   </i>
  <br><br><br>
-## * Bubble Sort:)
+ ## * Bubble Sort:)
  <h3>main idea:Repeatedly sort two adjacent element if they are in wrong order.</h3>
  <b>STEPS:</b>
   <i>
@@ -40,7 +40,7 @@
     </ol>
   </i>
  <br><br><br>
-## * Radix/Bucket Sort:)
+ ## * Radix/Bucket Sort:)
  <h3>main idea:Comparison of ones tens hundredth ..........positioned value of elements/data and arrange it accordingly.</h3>
  <b>STEPS:</b>
   <i>
@@ -49,7 +49,7 @@
     </ol>
   </i>
  <br><br><br>
-## * Merge Sort:)
+ ## * Merge Sort:)
  <h3>main idea:Divide and conquer i.e. divide the list in sublists and sort them accodingly.</h3>
  <b>STEPS:</b>
   <i>
@@ -68,7 +68,7 @@
     </ol>
   </i>
  <br><br><br>
-## * Quick Sort:)
+ ## * Quick Sort:)
  <h3>main idea:Assuming pivot element and partitioning it as smallest goes at left side and largest goes at right side.</h3>
  <b>STEPS:</b>
   <i>
@@ -80,7 +80,7 @@
     </ol>
   </i>
  <br><br><br>
-## * Exchange Sort:)
+ ## * Exchange Sort:)
  <h3>main idea:Making the elements sorted one by one from starting to end.</h3>
  <b>STEPS:</b>
   <i>
