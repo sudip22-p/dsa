@@ -27,8 +27,8 @@
   </i>
  <br><br><br>
 ## * Bubble Sort:)
-    <h3>main idea:Repeatedly sort two adjacent element if they are in wrong order.</h3>
-    <b>STEPS:</b>
+ <h3>main idea:Repeatedly sort two adjacent element if they are in wrong order.</h3>
+ <b>STEPS:</b>
   <i>
     <ol>
         <li>Compare first and second ,if wrong order swap them</li>
@@ -40,18 +40,18 @@
     </ol>
   </i>
  <br><br><br>
- ## * Radix/Bucket Sort:)
-    <h3>main idea:Comparison of ones tens hundredth ..........positioned value of elements/data and arrange it accordingly.</h3>
-    <b>STEPS:</b>
+## * Radix/Bucket Sort:)
+ <h3>main idea:Comparison of ones tens hundredth ..........positioned value of elements/data and arrange it accordingly.</h3>
+ <b>STEPS:</b>
   <i>
     <ol>
         <li>for more detail:-https://www.programiz.com/dsa/radix-sort</li>
     </ol>
   </i>
  <br><br><br>
- ## * Merge Sort:)
-    <h3>main idea:Divide and conquer i.e. divide the list in sublists and sort them accodingly.</h3>
-    <b>STEPS:</b>
+## * Merge Sort:)
+ <h3>main idea:Divide and conquer i.e. divide the list in sublists and sort them accodingly.</h3>
+ <b>STEPS:</b>
   <i>
     <ol>
         <li>Split the list into each single sublists for a element. </li>
@@ -68,9 +68,9 @@
     </ol>
   </i>
  <br><br><br>
- ## * Quick Sort:)
-    <h3>main idea:Assuming pivot element and partitioning it as smallest goes at left side and largest goes at right side.</h3>
-    <b>STEPS:</b>
+## * Quick Sort:)
+ <h3>main idea:Assuming pivot element and partitioning it as smallest goes at left side and largest goes at right side.</h3>
+ <b>STEPS:</b>
   <i>
     <ol>
         <li>Set one element as pivot element say the last element,initialize/reassign a helper variable i=low-1{low=leftmost partioned first element index}</li>
@@ -80,9 +80,9 @@
     </ol>
   </i>
  <br><br><br>
- ## * Exchange Sort:)
-    <h3>main idea:Making the elements sorted one by one from starting to end.</h3>
-    <b>STEPS:</b>
+## * Exchange Sort:)
+ <h3>main idea:Making the elements sorted one by one from starting to end.</h3>
+ <b>STEPS:</b>
   <i>
     <ol>
         <li>Set two variable X and Y such that X=0 for representing element in first and Y=X+1 travels throughout the array .If iteration is completed X increase by 1.Y re intialized as X+1.</li>
