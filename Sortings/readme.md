@@ -14,9 +14,9 @@
     </ol>
   </i>
  <br><br><br>
- ## * Selection Sort:)
-        <h3>main idea:Find the minm element from unsorted list and swap it at the beginning of list</h3>
-    <b>STEPS:</b>
+## * Selection Sort:)
+ <h3>main idea:Find the minm element from unsorted list and swap it at the beginning of list</h3>
+ <b>STEPS:</b>
   <i>
     <ol>
         <li>assume first element as minm and compare it with rest amd change minm if any smallest element is found compared to supposed smallest element(minm).</li>
@@ -26,7 +26,7 @@
     </ol>
   </i>
  <br><br><br>
- ## * Bubble Sort:)
+## * Bubble Sort:)
     <h3>main idea:Repeatedly sort two adjacent element if they are in wrong order.</h3>
     <b>STEPS:</b>
   <i>
