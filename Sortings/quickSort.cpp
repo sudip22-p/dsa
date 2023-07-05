@@ -1,5 +1,4 @@
 #include<iostream>
-#include<array>
 using namespace std;
 int partition(int array[],int low,int high){
     int pivot=array[high];
@@ -27,18 +26,29 @@ void quickSort(int array[],int low,int high){
         quickSort(array,pivotIndex+1,high);
     }
 }
-int main(){
-    int array[]={1,4,5,6,7,2,3,4,12,45,34,23,88,90,1,2,0,4,5};
-    int n =sizeof(array)/sizeof(array[0]);
-    quickSort(array,0,n-1);
-    cout<<"array after sorted:- ";
-    cout<<"{ ";
-    for (int i=0;i<n;i++){
-        if(i!=0&&i!=n){
-            cout<<" , ";
-        }
-        cout<<array[i];
+// Print an array
+void printArray(int array[], int size) {
+  int i;
+  for (i = 0; i < size; i++)
+    cout << array[i] << " ";
+  cout << endl;
+}
+//taking the array
+void takeArray(int data[],int size){
+    for(int i=0;i<size;i++){
+        cin>>data[i];
     }
-    cout<<" }"<<endl;
+}
+// driver code
+int main() {
+  int arraySize;
+  cout<<"enter the size of the array:";
+  cin>>arraySize;
+  int data[arraySize];
+  cout<<"enter the elements of the array:";
+  takeArray(data,arraySize);
+  quickSort(data,0,arraySize);
+  cout << "Sorted array in Acsending Order:\n";
+  printArray(data, arraySize);
     return 0;
 }
